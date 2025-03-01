@@ -35,7 +35,7 @@ body {
 .header {
     padding: 0;
     background-color: var(--bg-light);
-    height: auto;
+    height: 700px;
 }
 
 .nav-links {
@@ -131,7 +131,7 @@ body {
 .stats-container {
     display: flex;
     justify-content: center;
-    gap: 48px;
+    gap: 50px;
     max-width: 1110px;
     margin: 0 auto;
 }
@@ -289,7 +289,7 @@ body {
     }
     
     .stats-container {
-        gap: 30px;
+        gap: 50px;
     }
     
     .stats-item {
