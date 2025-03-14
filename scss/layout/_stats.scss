@@ -1,75 +1,60 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .stats {
+    padding: 100px 0;
     background-color: $primary-color;
     height: 250px;
-    @include flex-center;
     
     &-container {
-        display: flex;
-        justify-content: center;
-        gap: 50px;
         max-width: 1110px;
         margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 30px;
+        padding: 0 15px;
         
         @include respond-to(lg) {
-            justify-content: center;
+            max-width: 960px;
+            gap: 20px;
         }
         
         @include respond-to(md) {
-            gap: 50px;
+            max-width: 720px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        @include respond-to(sm) {
+            max-width: 540px;
+            grid-template-columns: repeat(2, 1fr);
         }
     }
     
     &-item {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        
-        @include respond-to(lg) {
-            width: calc(33.333% - 32px);
-        }
-        
-        @include respond-to(md) {
-            width: calc(50% - 15px);
-        }
-        
-        @include respond-to(sm) {
-            width: 100%;
-        }
+        color: $white;
+        text-align: center;
         
         span {
+            display: block;
             font-size: 21px;
             font-weight: 500;
-            color: $white;
-            line-height: 1;
-            
-            @include respond-to(md) {
-                font-size: 36px;
-            }
+            margin-bottom: 10px;
         }
         
         p {
             font-size: 14px;
-            color: $white;
-            margin: 0;
-            line-height: 1;
-            
-            @include respond-to(md) {
-                font-size: 18px;
-            }
+            line-height: 1.2;
         }
     }
     
     &-icon {
         width: 50px;
         height: 40px;
-        
-        @include respond-to(md) {
-            width: 60px;
-            height: 72px;
-        }
+        margin-bottom: 20px;
     }
     
     @include respond-to(md) {
+        height: auto;
         padding: 60px 0;
     }
 } 

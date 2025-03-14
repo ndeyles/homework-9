@@ -1,3 +1,6 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .hero {
     padding: 0;
     padding-top: 162px;
@@ -10,8 +13,19 @@
     
     &-content {
         max-width: 541px;
-        margin: 0;
         margin-left: 398px;
+        
+        @include respond-to(lg) {
+            margin-left: 50px;
+        }
+        
+        @include respond-to(md) {
+            margin-left: 30px;
+        }
+        
+        @include respond-to(sm) {
+            margin: 0 15px;
+        }
     }
     
     h1 {

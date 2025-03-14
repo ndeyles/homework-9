@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 // Media Query Mixins
 @mixin respond-to($breakpoint) {
     @if $breakpoint == xl {

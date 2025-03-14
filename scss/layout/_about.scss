@@ -1,26 +1,46 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .about {
-    padding: 112px 0;
+    padding: 120px 0;
+    background-color: $white;
     text-align: center;
     
     @include respond-to(md) {
         padding: 80px 0;
     }
     
+    &-content {
+        max-width: 540px;
+        margin: 0 auto;
+        text-align: center;
+        
+        @include respond-to(lg) {
+            margin: 0 auto;
+        }
+        
+        @include respond-to(md) {
+            margin: 0 auto;
+        }
+        
+        @include respond-to(sm) {
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+    }
+    
     h2 {
         @include heading-2;
         margin-bottom: 50px;
-        color: $text-primary;
+        text-align: center;
         
-        @include respond-to(sm) {
-            font-size: 24px;
+        @include respond-to(md) {
+            margin-bottom: 30px;
         }
     }
     
     p {
-        max-width: 540px;
-        margin: 0 auto;
-        color: $text-secondary;
-        font-size: $text-regular;
-        line-height: 26px;
+        @include regular-text;
+        text-align: center;
     }
 } 

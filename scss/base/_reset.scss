@@ -1,3 +1,6 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 * {
     margin: 0;
     padding: 0;
@@ -11,26 +14,27 @@ body {
 }
 
 .container {
-    max-width: 1150px;
-    margin: 0 auto;
+    max-width: 1110px;
+    margin-left: 398px;
     padding: 0;
     
     @include respond-to(xl) {
-        margin-left: 50px;
+        margin-left: 330px;
         max-width: 960px;
     }
     
     @include respond-to(lg) {
-        margin-left: 30px;
+        margin-left: 50px;
         max-width: 720px;
     }
     
     @include respond-to(md) {
-        margin: 0 auto;
+        margin-left: 30px;
         max-width: 540px;
     }
     
     @include respond-to(sm) {
         margin: 0 15px;
+        max-width: 100%;
     }
 } 
