@@ -1,0 +1,47 @@
+// Media Query Mixins
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == xl {
+        @media (max-width: $breakpoint-xl) { @content; }
+    }
+    @if $breakpoint == lg {
+        @media (max-width: $breakpoint-lg) { @content; }
+    }
+    @if $breakpoint == md {
+        @media (max-width: $breakpoint-md) { @content; }
+    }
+    @if $breakpoint == sm {
+        @media (max-width: $breakpoint-sm) { @content; }
+    }
+}
+
+// Flexbox Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// Typography Mixins
+@mixin heading-1 {
+    font-size: $h1-size;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+@mixin heading-2 {
+    font-size: $h2-size;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+@mixin regular-text {
+    font-size: $text-regular;
+    line-height: 26px;
+    color: $text-secondary;
+} 

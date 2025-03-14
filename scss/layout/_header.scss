@@ -1,0 +1,28 @@
+.header {
+    padding: 0;
+    background-color: $bg-light;
+    height: 700px;
+    
+    .nav-links {
+        display: flex;
+        gap: 42px;
+        padding-top: 79px;
+        padding-left: 398px;
+        justify-content: flex-start;
+        
+        @include respond-to(md) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+    
+    .nav-link {
+        color: $text-primary;
+        text-decoration: none;
+        font-size: $text-regular;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+} 

@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-primary;
+}
+
+body {
+    color: $text-primary;
+    line-height: 1.65;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0;
+    
+    @include respond-to(xl) {
+        margin-left: 50px;
+        max-width: 960px;
+    }
+    
+    @include respond-to(lg) {
+        margin-left: 30px;
+        max-width: 720px;
+    }
+    
+    @include respond-to(md) {
+        margin: 0 auto;
+        max-width: 540px;
+    }
+    
+    @include respond-to(sm) {
+        margin: 0 15px;
+    }
+} 

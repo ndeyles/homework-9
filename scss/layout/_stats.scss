@@ -1,0 +1,75 @@
+.stats {
+    background-color: $primary-color;
+    height: 250px;
+    @include flex-center;
+    
+    &-container {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        max-width: 1110px;
+        margin: 0 auto;
+        
+        @include respond-to(lg) {
+            justify-content: center;
+        }
+        
+        @include respond-to(md) {
+            gap: 50px;
+        }
+    }
+    
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        
+        @include respond-to(lg) {
+            width: calc(33.333% - 32px);
+        }
+        
+        @include respond-to(md) {
+            width: calc(50% - 15px);
+        }
+        
+        @include respond-to(sm) {
+            width: 100%;
+        }
+        
+        span {
+            font-size: 21px;
+            font-weight: 500;
+            color: $white;
+            line-height: 1;
+            
+            @include respond-to(md) {
+                font-size: 36px;
+            }
+        }
+        
+        p {
+            font-size: 14px;
+            color: $white;
+            margin: 0;
+            line-height: 1;
+            
+            @include respond-to(md) {
+                font-size: 18px;
+            }
+        }
+    }
+    
+    &-icon {
+        width: 50px;
+        height: 40px;
+        
+        @include respond-to(md) {
+            width: 60px;
+            height: 72px;
+        }
+    }
+    
+    @include respond-to(md) {
+        padding: 60px 0;
+    }
+} 

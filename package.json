@@ -1,0 +1,12 @@
+{
+  "name": "homework-9",
+  "version": "1.0.0",
+  "description": "SCSS version of the site",
+  "scripts": {
+    "sass": "sass scss/main.scss css/style.css --watch",
+    "build": "sass scss/main.scss css/style.css --style compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.71.1"
+  }
+}

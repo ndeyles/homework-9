@@ -1,0 +1,26 @@
+.about {
+    padding: 112px 0;
+    text-align: center;
+    
+    @include respond-to(md) {
+        padding: 80px 0;
+    }
+    
+    h2 {
+        @include heading-2;
+        margin-bottom: 50px;
+        color: $text-primary;
+        
+        @include respond-to(sm) {
+            font-size: 24px;
+        }
+    }
+    
+    p {
+        max-width: 540px;
+        margin: 0 auto;
+        color: $text-secondary;
+        font-size: $text-regular;
+        line-height: 26px;
+    }
+} 
